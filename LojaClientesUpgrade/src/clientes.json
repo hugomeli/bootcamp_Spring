@@ -1,0 +1,23 @@
+[
+  {
+    "nome": "Carlos",
+    "cpf": "999.321.456-00",
+    "email": "carlos@ig.com.br",
+    "telefone": "(99) 96921-99999",
+    "pedidosRegistrados": null
+  },
+  {
+    "nome": "Joao",
+    "cpf": "998.312.414-00",
+    "email": "joao@ig.com.br",
+    "telefone": "(99) 92421-912313",
+    "pedidosRegistrados": null
+  },
+  {
+    "nome": "Joana",
+    "cpf": "997.531.643-00",
+    "email": "joana@bol.com.br",
+    "telefone": "(99) 93123-999312",
+    "pedidosRegistrados": null
+  }
+]
