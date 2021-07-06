@@ -1,4 +1,4 @@
-package br.com.mercadolivre.bootcamp.linktracker.repository;
+package br.com.mercadolivre.bootcamp.linktracker.model.repository;
 
 
 import br.com.mercadolivre.bootcamp.linktracker.model.entity.Link;

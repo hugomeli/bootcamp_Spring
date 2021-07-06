@@ -2,10 +2,10 @@ package br.com.mercadolivre.bootcamp.linktracker.controller;
 
 
 import br.com.mercadolivre.bootcamp.linktracker.model.entity.Link;
-import br.com.mercadolivre.bootcamp.linktracker.service.CreateLinkService;
-import br.com.mercadolivre.bootcamp.linktracker.service.InvalidarService;
-import br.com.mercadolivre.bootcamp.linktracker.service.MetricasService;
-import br.com.mercadolivre.bootcamp.linktracker.service.RedirecionamentoService;
+import br.com.mercadolivre.bootcamp.linktracker.model.service.CreateLinkService;
+import br.com.mercadolivre.bootcamp.linktracker.model.service.InvalidarService;
+import br.com.mercadolivre.bootcamp.linktracker.model.service.MetricasService;
+import br.com.mercadolivre.bootcamp.linktracker.model.service.RedirecionamentoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

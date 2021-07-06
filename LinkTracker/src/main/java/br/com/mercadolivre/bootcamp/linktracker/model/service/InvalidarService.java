@@ -1,8 +1,8 @@
-package br.com.mercadolivre.bootcamp.linktracker.service;
+package br.com.mercadolivre.bootcamp.linktracker.model.service;
 
 import br.com.mercadolivre.bootcamp.linktracker.validations.exceptions.LinkInvalidoException;
 import br.com.mercadolivre.bootcamp.linktracker.model.entity.Link;
-import br.com.mercadolivre.bootcamp.linktracker.repository.LinkRepository;
+import br.com.mercadolivre.bootcamp.linktracker.model.repository.LinkRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
