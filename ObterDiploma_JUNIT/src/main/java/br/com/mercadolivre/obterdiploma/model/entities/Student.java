@@ -2,12 +2,12 @@ package br.com.mercadolivre.obterdiploma.model.entities;
 
 import java.util.List;
 
-public class Aluno {
+public class Student {
 
     private String name;
     private List<Subject> subjects;
 
-    public Aluno(String name, List<Subject> subjects) {
+    public Student(String name, List<Subject> subjects) {
         this.name = name;
         this.subjects = subjects;
     }

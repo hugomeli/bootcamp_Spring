@@ -1,18 +1,18 @@
 package br.com.mercadolivre.obterdiploma.model.service;
 
-import br.com.mercadolivre.obterdiploma.controller.utils.CalculoMedia;
+import br.com.mercadolivre.obterdiploma.model.entities.Student;
+import br.com.mercadolivre.obterdiploma.utils.CalculoMedia;
 import br.com.mercadolivre.obterdiploma.model.DTO.ResponseDTO;
-import br.com.mercadolivre.obterdiploma.model.entities.Aluno;
 import org.springframework.stereotype.Service;
 
 @Service
 public class DiplomaService {
 
-    public ResponseDTO getDiploma(Aluno aluno){
-        double average = CalculoMedia.calculaMediaAluno(aluno);
+    public ResponseDTO getDiploma(Student student){
+        double average = CalculoMedia.calculaMediaAluno(student);
         String message = formulaMensagem(average);
         return new ResponseDTO(
-                message, average, aluno
+                message, average, student
         );
     }
 

@@ -1,7 +1,7 @@
 package br.com.mercadolivre.obterdiploma.controller;
 
 import br.com.mercadolivre.obterdiploma.model.DTO.ResponseDTO;
-import br.com.mercadolivre.obterdiploma.model.entities.Aluno;
+import br.com.mercadolivre.obterdiploma.model.forms.StudentDTO;
 import br.com.mercadolivre.obterdiploma.model.service.DiplomaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,7 +19,7 @@ public class ObterDiplomaController {
     }
 
     @PostMapping("/analyzeNotes")
-    public ResponseDTO obterDiploma(@RequestBody Aluno aluno){
-        return diplomaService.getDiploma(aluno);
+    public ResponseDTO obterDiploma(@RequestBody StudentDTO studentDTO){
+        return diplomaService.getDiploma(StudentDTO.converteDTOparaAluno(studentDTO));
     }
 }
