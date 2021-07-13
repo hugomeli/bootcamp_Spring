@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
+
 @RestController
 public class ObterDiplomaController {
 
@@ -19,7 +21,7 @@ public class ObterDiplomaController {
     }
 
     @PostMapping("/analyzeNotes")
-    public ResponseDTO obterDiploma(@RequestBody StudentDTO studentDTO){
+    public ResponseDTO obterDiploma(@Valid @RequestBody StudentDTO studentDTO){
         return diplomaService.getDiploma(StudentDTO.converteDTOparaAluno(studentDTO));
     }
 }
