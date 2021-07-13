@@ -4,6 +4,8 @@ import br.com.mercadolivre.obterdiploma.model.DTO.ResponseDTO;
 import br.com.mercadolivre.obterdiploma.model.forms.StudentDTO;
 import br.com.mercadolivre.obterdiploma.model.service.DiplomaService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,7 +23,8 @@ public class ObterDiplomaController {
     }
 
     @PostMapping("/analyzeNotes")
-    public ResponseDTO obterDiploma(@Valid @RequestBody StudentDTO studentDTO){
-        return diplomaService.getDiploma(StudentDTO.converteDTOparaAluno(studentDTO));
+    public ResponseEntity<ResponseDTO> obterDiploma(@Valid @RequestBody StudentDTO studentDTO){
+        ResponseDTO responseDTO = diplomaService.getDiploma(StudentDTO.converteDTOparaAluno(studentDTO));
+        return new ResponseEntity<>(responseDTO, HttpStatus.CREATED);
     }
 }
