@@ -7,8 +7,9 @@ public class CalculoMedia {
 
     public static double calculaMediaAluno(Student student){
         int qtdDisciplinas = student.getSubjects().size();
-        return student.getSubjects().stream().mapToDouble(
+        double average = student.getSubjects().stream().mapToDouble(
                 Subject::getNote).sum() / qtdDisciplinas;
+        return NumberUtil.round(average, 2);
 
     }
 }
